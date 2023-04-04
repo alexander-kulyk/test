@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@1/dist/cdn/docsearch.min.css"
+    />
+  </head>
+  <body>
+    <nav><input type="search" id="searchbar" /></nav>
+    <script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@1/dist/cdn/docsearch.min.js"></script>
+    <script>
+      docsearch({
+        inputSelector: '#searchbar',
+        typesenseCollectionName: 'smart-docs', // Should match the collection name you mention in the docsearch scraper config.js
+        typesenseServerConfig: {
+          nodes: [
+            {
+              host: 'xancqiro1ty0jfvkp-1.a1.typesense.net', // For Typesense Cloud use xxx.a1.typesense.net
+              port: '443', // For Typesense Cloud use 443
+              protocol: 'https', // For Typesense Cloud use https
+            },
+          ],
+          apiKey: 'TNFGr7QqtbMsLO9k4lPedQt64iT01lpI', // Use API Key with only Search permissions
+        },
+      });
+    </script>
+  </body>
+</html>
